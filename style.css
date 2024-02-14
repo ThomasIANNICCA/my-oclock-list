@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin : 0;
+    padding : 0;
+}
+
+body{
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ------------------- TO DO LIST ----------------------------- */
+.container{
+    border: 2px solid red;
+    border-radius : 10px;
+    width: 70%;
+    min-height: 600px;
+    max-height: 800px;
+    padding: 40px;
+    overflow: auto;
+}
+
+h1{
+
+}
+
+/* ------------------------ INPUT POUR TODO --------------------- */
+.input-add-container{
+    border: 2px solid blue;
+    margin: 20px 0;
+    position: relative;
+}
+
+input{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    padding : 0 130px 0 35px;
+    font-size: 1.5rem;
+}
+
+.add-button{
+    position: absolute;
+    right: 0;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*---------------------- CONTENU DE LA LISTE -----------------*/
+ul li{
+    position: relative;
+    list-style: none;
+    border: 2px solid blue;
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    margin: 15px 0;
+}
+
+.delete-button{
+    content: ' ';
+    background-image: url("/images/close.png");
+    background-size: cover;
+    background-position: center;
+
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 0;
+    background-image: url('/images/stop.png');
+    background-size: cover;
+    background-position: center ;
+    width: 25px;
+    height: 25px;
+}
+
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: -3px;
+    background-image: url("/images/check-box.png");
+    background-size: cover;
+    background-position: center;
+    width: 30px;
+    height: 25px;
+}
+
+.checked{
+    color: #555;
+    text-decoration: line-through;
+}
