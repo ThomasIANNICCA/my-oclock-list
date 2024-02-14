@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/55c005e3d9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -12,27 +11,18 @@
     <div class="container">
         <div class="title">
             <h1>My O'clock List</h1>
+            <img class ="logo" src="/images/cafe.png" alt="">
         </div>
-        <div class="input-add-container">
-            <input type="text" id="add">
-            <button class="add-button">Add</button>
-        </div>
-        <div class="list-content">
-            <ul>
-                <li >Element 1<span class="delete-button"></span></li>
-                <li class="checked">Un texte vraiment très long pour essayer et voir si tout foncitonne, notammene t le fait de supprimer enfin plutot de rayer la ligneeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li class="checked">Element 1<span class="delete-button"></span></li>
-                <li>Element 2<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
-                <li>Element 3<span class="delete-button"></span></li>
+        <form class="input-add-container" action="" method="post">
+                <input type="text" id="input-add" placeholder="Ajouter une tâche...">
+                <button class="add-button" type="submit">Ajouter</button>
+        </form>
+        <div class="list-container">
+            <ul class="list-content">
             </ul>
         </div>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
