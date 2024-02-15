@@ -7,12 +7,12 @@
 
 body{
     font-family: "Open Sans", sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("/images/background_coffee.jpg");
+    background-image: url("./images/background_coffee.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -32,6 +32,7 @@ body{
 .title{
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -42,8 +43,8 @@ h1{
     text-transform: uppercase;
     font-size: 2.5rem;
 }
-.logo{
 
+.logo{
     height: 55px;
     width: 55px;
 }
@@ -51,20 +52,22 @@ h1{
 /* ------------------------ INPUT POUR TODO --------------------- */
 .input-add-container{
     margin: 20px 0;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 10 0px;
+
 }
 
 input{
     width: 100%;
     height: 50px;
     border-radius: 5px;
-    padding : 0 130px 0 40px;
+    padding : 0 0 0 10px;
     font-size: 1.5rem;
     border: none;
     color: #555;
     background-color: #fff;
     transition: 0.2s ;
-    
 }
 
 input:hover{
@@ -72,8 +75,7 @@ input:hover{
 }
 
 .add-button{
-    position: absolute;
-    right: 0;
+    margin: 0px 5px;
     height: 50px;
     width: 120px;
     border-radius: 5px;
@@ -113,7 +115,7 @@ ul li:hover{
 
 .delete-button{
     content: ' ';
-    background-image: url("/images/close.png");
+    background-image: url("./images/close.png");
     background-size: cover;
     background-position: center;
     width: 20px;
@@ -126,9 +128,9 @@ ul li:hover{
 ul li::before{
     content: '';
     position: absolute;
-    top: 20px;
+    top: 17px;
     left: 5px;
-    background-image: url('/images/unchecked_brown.png');
+    background-image: url('./images/unchecked_brown.png');
     background-size: cover;
     background-position: center ;
     width: 25px;
@@ -140,7 +142,7 @@ ul li.checked::before{
     position: absolute;
     top: 18px;
     left: 5px;
-    background-image: url("/images/checked_brown.png");
+    background-image: url("./images/checked_brown.png");
     background-size: cover;
     background-position: center;
     width: 27px;
@@ -150,4 +152,49 @@ ul li.checked::before{
 
 .checked{
     text-decoration: line-through;
+}
+
+/*------------------ RESPONSIVE -----------------------------*/
+
+@media screen and (max-width: 1230px){
+    .container{
+        width: 90%;
+        max-height: 90vh;
+    }
+
+    .title{
+        margin: 0 0 15px 0;
+    }
+
+    h1{
+        font-size: 1.5rem;
+    }
+
+    input, ul li, .add-button{
+        font-size: 1rem;
+    }
+
+    ul li::before, ul li.checked::before{
+        top: 10px;
+    }
+
+    .delete-button{
+        top: 12px;
+    }
+}
+
+
+
+@media screen and (max-width: 630px){    
+
+    .input-add-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    
+    .add-button{
+        margin: 10px 0;
+    }
 }
